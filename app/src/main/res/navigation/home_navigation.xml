@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_movies_list">
+
+    <fragment
+        android:id="@+id/nav_movies_list"
+        android:name="com.karim.movies.uI.homeScreen.moviesCategoriesScreen.MoviesCategoriesFragment"
+        android:label="Movie List"
+        tools:layout="@layout/fragment_movies_categories">
+        <action
+            android:id="@+id/action_from_list_to_movie"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:destination="@+id/nav_movie_details" />
+        <argument
+            android:name="movie_id"
+            android:defaultValue="-1"
+            app:argType="Integer"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_movie_details"
+        android:name="com.karim.movies.uI.homeScreen.movieDetails.MovieDetailsFragment"
+        android:label="Movie Details"
+        tools:layout="@layout/fragment_movie_details" />
+
+
+</navigation>
