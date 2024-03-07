@@ -1,6 +1,10 @@
-package com.karim.domain.model
+package com.karim.data.db.local.entity
 
-data class Movie(
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+@Entity(tableName = "movies")
+data class MovieEntity(
+    @PrimaryKey
     val id: Long,
     val adult: Boolean,
     val posterPath:String,
@@ -12,5 +16,4 @@ data class Movie(
     val releaseStatus:String,
     val imdb:String,
     val duration:String,
-) {
-}
+)

@@ -9,5 +9,5 @@
     android:padding="@dimen/safe_area"
     android:orientation="vertical"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".uI.homeScreen.moviesCategoriesScreen.MoviesCategoriesFragment"
+    tools:context=".ui.homeScreen.moviesCategoriesScreen.MoviesCategoriesFragment"
     tools:listitem="@layout/list_item_category" />

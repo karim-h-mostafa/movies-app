@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("androidx.navigation.safeargs.kotlin")
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -52,10 +55,21 @@ dependencies {
     implementation(libs.androidx.activity)
 
     implementation(libs.picasso)
+    implementation(libs.hilt)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.timber)
+    kapt(libs.hilt.compiler)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
     implementation(project(":domain"))
     implementation(project(":data"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

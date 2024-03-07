@@ -1,6 +1,9 @@
 package com.karim.domain.model
 
 data class Category(
-    val id: Int,
-    val name: String
-)
+    val id: Long,
+    val name: String,
+    val movie: List<Movie>
+) {
+
+}

@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_movies_list"
-        android:name="com.karim.movies.uI.homeScreen.moviesCategoriesScreen.MoviesCategoriesFragment"
+        android:name="com.karim.movies.ui.homeScreen.moviesCategoriesScreen.MoviesCategoriesFragment"
         android:label="Movie List"
         tools:layout="@layout/fragment_movies_categories">
         <action
             android:id="@+id/action_from_list_to_movie"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
-            app:destination="@+id/nav_movie_details" />
-        <argument
-            android:name="movie_id"
-            android:defaultValue="-1"
-            app:argType="Integer"
-            app:nullable="false" />
+            app:destination="@+id/nav_movie_details" >
+        </action>
     </fragment>
     <fragment
         android:id="@+id/nav_movie_details"
-        android:name="com.karim.movies.uI.homeScreen.movieDetails.MovieDetailsFragment"
+        android:name="com.karim.movies.ui.homeScreen.movieDetails.MovieDetailsFragment"
         android:label="Movie Details"
-        tools:layout="@layout/fragment_movie_details" />
-
-
+        tools:layout="@layout/fragment_movie_details" >
+        <argument
+            android:name="movie_id"
+            android:defaultValue="-1"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
 </navigation>

@@ -7,14 +7,14 @@
     android:fillViewport="true"
     android:scrollbarSize="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".uI.homeScreen.movieDetails.MovieDetailsFragment">
+    tools:context=".ui.homeScreen.movieDetails.MovieDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:paddingBottom="@dimen/safe_area"
-        tools:context=".uI.homeScreen.movieDetails.MovieDetailsFragment">
+        tools:context=".ui.homeScreen.movieDetails.MovieDetailsFragment">
 
         <ImageView
             android:id="@+id/iv_thumbnail"
